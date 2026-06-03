@@ -31,7 +31,6 @@
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#admin">Admin</a>
           <a href="#contact">Contact</a>
           <a class="quote-btn" href="https://wa.me/254798137188" target="_blank" rel="noreferrer">Get Quote</a>
         </div>
@@ -234,11 +233,12 @@
         </div>
       </section>
 
-      <section class="section admin-section" id="admin">
+      <section class="section admin-section is-hidden" id="admin" aria-hidden="true">
         <div class="section-heading">
           <span>Admin Area</span>
           <h2>Upload a project to feature in the hero slider.</h2>
         </div>
+        <button class="admin-logout" type="button" id="adminLogout">Log Out</button>
         <div class="admin-panel">
           <form class="admin-form" id="projectForm">
             <label>
@@ -287,6 +287,26 @@
         </div>
       </section>
     </main>
+
+    <button class="admin-access" type="button" id="adminAccess">Admin</button>
+
+    <div class="login-overlay is-hidden" id="loginOverlay" aria-hidden="true">
+      <form class="login-box" id="loginForm">
+        <button class="login-close" type="button" id="loginClose" aria-label="Close login">&times;</button>
+        <span>Admin Login</span>
+        <h2>Kongowea Graphix</h2>
+        <label>
+          Email
+          <input type="email" id="adminEmail" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="adminPassword" autocomplete="current-password" required />
+        </label>
+        <button type="submit">Log In</button>
+        <p class="login-error" id="loginError" aria-live="polite"></p>
+      </form>
+    </div>
 
     <a class="whatsapp-float" href="https://wa.me/254798137188" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
       <span>WhatsApp</span>

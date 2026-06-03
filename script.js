@@ -13,9 +13,23 @@ const imagePreview = document.querySelector("#imagePreview");
 const previewTitle = document.querySelector("#previewTitle");
 const previewDescription = document.querySelector("#previewDescription");
 const clearProjects = document.querySelector("#clearProjects");
+const adminAccess = document.querySelector("#adminAccess");
+const loginOverlay = document.querySelector("#loginOverlay");
+const loginForm = document.querySelector("#loginForm");
+const loginClose = document.querySelector("#loginClose");
+const adminEmail = document.querySelector("#adminEmail");
+const adminPassword = document.querySelector("#adminPassword");
+const loginError = document.querySelector("#loginError");
+const adminSection = document.querySelector("#admin");
+const adminLogout = document.querySelector("#adminLogout");
 const heroSlider = document.querySelector(".hero-slider");
 const portfolioGrid = document.querySelector(".portfolio-grid");
 const uploadedProjectsKey = "kongowea_uploaded_projects";
+const adminSessionKey = "kongowea_admin_logged_in";
+const adminLogin = {
+  email: "gathogosimon79@gmail.com",
+  password: "..Kongowea@254"
+};
 let currentSlide = 0;
 let sliderTimer;
 
@@ -107,8 +121,37 @@ function readImageAsDataUrl(file) {
   });
 }
 
+function showLogin() {
+  loginOverlay.classList.remove("is-hidden");
+  loginOverlay.setAttribute("aria-hidden", "false");
+  loginError.textContent = "";
+  adminEmail.focus();
+}
+
+function hideLogin() {
+  loginOverlay.classList.add("is-hidden");
+  loginOverlay.setAttribute("aria-hidden", "true");
+  loginForm.reset();
+}
+
+function showAdmin() {
+  adminSection.classList.remove("is-hidden");
+  adminSection.setAttribute("aria-hidden", "false");
+  adminAccess.classList.add("is-hidden");
+}
+
+function hideAdmin() {
+  adminSection.classList.add("is-hidden");
+  adminSection.setAttribute("aria-hidden", "true");
+  adminAccess.classList.remove("is-hidden");
+}
+
 getUploadedProjects().forEach(addProjectToPage);
 rebuildDots();
+
+if (sessionStorage.getItem(adminSessionKey) === "true") {
+  showAdmin();
+}
 
 prevButton.addEventListener("click", () => {
   showSlide(currentSlide - 1);
@@ -130,6 +173,37 @@ navLinks.querySelectorAll("a").forEach((link) => {
     navLinks.classList.remove("open");
     menuToggle.setAttribute("aria-expanded", "false");
   });
+});
+
+adminAccess.addEventListener("click", showLogin);
+loginClose.addEventListener("click", hideLogin);
+
+loginOverlay.addEventListener("click", (event) => {
+  if (event.target === loginOverlay) {
+    hideLogin();
+  }
+});
+
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const email = adminEmail.value.trim().toLowerCase();
+  const password = adminPassword.value;
+
+  if (email === adminLogin.email && password === adminLogin.password) {
+    sessionStorage.setItem(adminSessionKey, "true");
+    hideLogin();
+    showAdmin();
+    adminSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  loginError.textContent = "Wrong email or password.";
+});
+
+adminLogout.addEventListener("click", () => {
+  sessionStorage.removeItem(adminSessionKey);
+  hideAdmin();
+  window.location.hash = "";
 });
 
 projectImage.addEventListener("change", async () => {
