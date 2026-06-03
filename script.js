@@ -28,7 +28,7 @@ const uploadedProjectsKey = "kongowea_uploaded_projects";
 const adminSessionKey = "kongowea_admin_logged_in";
 const adminLogin = {
   email: "gathogosimon79@gmail.com",
-  password: "..Kongowea@254"
+  password: "Kongowea@254"
 };
 let currentSlide = 0;
 let sliderTimer;
