@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-label="Brand identity mockup">
+  <rect width="900" height="675" fill="#082844"/><rect x="72" y="70" width="756" height="535" rx="18" fill="#f8fbff"/>
+  <circle cx="218" cy="230" r="86" fill="#07d7e8"/><circle cx="218" cy="230" r="55" fill="#082844"/>
+  <text x="218" y="248" text-anchor="middle" font-family="Arial" font-size="52" font-weight="800" fill="#fff">KG</text>
+  <text x="335" y="205" font-family="Arial" font-size="48" font-weight="800" fill="#082844">Kongowea</text>
+  <text x="335" y="262" font-family="Arial" font-size="48" font-weight="800" fill="#07d7e8">Graphix</text>
+  <rect x="140" y="394" width="280" height="142" rx="16" fill="#082844"/><text x="170" y="456" font-family="Arial" font-size="26" font-weight="700" fill="#fff">Business Card</text><text x="170" y="492" font-family="Arial" font-size="18" fill="#bdeff6">Creative design studio</text>
+  <rect x="470" y="394" width="260" height="142" rx="16" fill="#07d7e8"/><text x="500" y="456" font-family="Arial" font-size="28" font-weight="800" fill="#082844">Brand Kit</text><text x="500" y="492" font-family="Arial" font-size="18" fill="#082844">Logo + color system</text>
+</svg>

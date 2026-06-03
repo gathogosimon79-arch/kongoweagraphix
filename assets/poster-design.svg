@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-label="Poster design mockup">
+  <rect width="900" height="675" fill="#061726"/><rect x="142" y="45" width="470" height="585" rx="20" fill="#ffffff"/>
+  <rect x="172" y="78" width="410" height="225" rx="12" fill="#07d7e8"/><circle cx="500" cy="145" r="86" fill="#16d36b"/>
+  <text x="198" y="390" font-family="Arial" font-size="62" font-weight="900" fill="#082844">EVENT</text><text x="198" y="455" font-family="Arial" font-size="62" font-weight="900" fill="#07d7e8">POSTER</text>
+  <rect x="198" y="492" width="250" height="16" rx="8" fill="#082844"/><rect x="198" y="526" width="330" height="14" rx="7" fill="#d9e7ee"/><rect x="198" y="554" width="230" height="14" rx="7" fill="#d9e7ee"/>
+  <rect x="574" y="358" width="190" height="190" rx="20" fill="#082844"/><text x="669" y="435" text-anchor="middle" font-family="Arial" font-size="32" font-weight="900" fill="#fff">PRINT</text><text x="669" y="476" text-anchor="middle" font-family="Arial" font-size="32" font-weight="900" fill="#07d7e8">READY</text>
+</svg>
