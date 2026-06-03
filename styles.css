@@ -66,7 +66,7 @@ h1 span, .section-heading span, .contact-panel span { color: var(--cyan); }
 .portrait-card img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
 .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
 .stats strong { display: grid; place-items: center; min-height: 92px; border-radius: 8px; color: var(--white); background: var(--navy); }
-.services-section { background: var(--white); }
+.services-section, .admin-section { background: var(--white); }
 .service-grid, .portfolio-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
 .service-grid article, .portfolio-grid article { border: 1px solid #d9e7ee; border-radius: 8px; background: var(--white); overflow: hidden; box-shadow: 0 16px 35px rgba(8,40,68,.08); }
 .service-grid article { padding: 28px; }
@@ -75,6 +75,22 @@ h1 span, .section-heading span, .contact-panel span { color: var(--cyan); }
 .service-grid p, .portfolio-grid p, .contact-panel p { color: var(--muted); line-height: 1.65; }
 .portfolio-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #eef5f9; }
 .portfolio-grid div { padding: 22px; }
+.admin-panel { display: grid; grid-template-columns: minmax(0,1fr) minmax(280px,420px); gap: 28px; align-items: start; }
+.admin-form, .admin-preview { border: 1px solid #d9e7ee; border-radius: 8px; background: var(--white); box-shadow: 0 16px 35px rgba(8,40,68,.08); }
+.admin-form { display: grid; gap: 18px; padding: clamp(22px,4vw,34px); }
+.admin-form label { display: grid; gap: 8px; color: var(--navy); font-weight: 800; }
+.admin-form input, .admin-form textarea { width: 100%; border: 1px solid #cbdde6; border-radius: 8px; padding: 13px 14px; color: var(--ink); background: #f9fcff; font: inherit; }
+.admin-form input:focus, .admin-form textarea:focus { outline: 3px solid rgba(7,215,232,.25); border-color: var(--cyan); }
+.admin-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.admin-actions button { min-height: 48px; border: 0; border-radius: 8px; padding: 0 18px; color: var(--navy); background: var(--cyan); font-weight: 900; cursor: pointer; }
+.admin-actions button + button { color: var(--white); background: var(--navy); }
+.admin-note { margin-bottom: 0; color: var(--muted); font-size: .92rem; line-height: 1.55; }
+.admin-preview { overflow: hidden; padding-bottom: 24px; }
+.admin-preview span { display: inline-block; margin: 22px 22px 12px; color: var(--cyan); font-size: .86rem; font-weight: 900; text-transform: uppercase; }
+.admin-preview img { display: block; width: calc(100% - 44px); margin: 0 22px 18px; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 8px; background: #eef5f9; }
+.admin-preview h3, .admin-preview p { margin-inline: 22px; }
+.admin-preview h3 { color: var(--navy); }
+.admin-preview p { margin-bottom: 0; color: var(--muted); line-height: 1.6; }
 .contact-panel { display: flex; align-items: center; justify-content: space-between; gap: 32px; border-radius: 8px; padding: clamp(28px,5vw,52px); color: var(--white); background: linear-gradient(135deg,var(--navy),#0d4967); }
 .contact-panel h2, .contact-panel p { color: var(--white); }
 .contact-actions a { color: var(--navy); background: var(--cyan); }
@@ -103,7 +119,7 @@ h1 span, .section-heading span, .contact-panel span { color: var(--cyan); }
   .slide-content { max-width: 640px; }
   h1 { font-size: clamp(2.15rem,8vw,3.8rem); }
   .glass-card { display: none; }
-  .about-grid, .service-grid, .portfolio-grid { grid-template-columns: 1fr; }
+  .about-grid, .service-grid, .portfolio-grid, .admin-panel { grid-template-columns: 1fr; }
   .portrait-card { max-width: 420px; }
   .stats { grid-template-columns: repeat(3,1fr); }
   .contact-panel { align-items: flex-start; flex-direction: column; }
@@ -140,6 +156,9 @@ h1 span, .section-heading span, .contact-panel span { color: var(--cyan); }
   .portfolio-grid { gap: 18px; }
   .portfolio-grid img { aspect-ratio: 1 / 1; }
   .portfolio-grid div { padding: 18px; }
+  .admin-form { padding: 20px; }
+  .admin-actions button { width: 100%; }
+  .admin-preview img { aspect-ratio: 1 / 1; }
   .contact-panel { padding: 24px 18px; }
   .contact-actions { gap: 10px; }
   .whatsapp-float { right: 14px; bottom: 14px; min-height: 50px; padding: 7px; }

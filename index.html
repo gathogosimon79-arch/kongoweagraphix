@@ -31,6 +31,7 @@
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
+          <a href="#admin">Admin</a>
           <a href="#contact">Contact</a>
           <a class="quote-btn" href="https://wa.me/254798137188" target="_blank" rel="noreferrer">Get Quote</a>
         </div>
@@ -230,6 +231,45 @@
             <img src="photos/project-graduation-print.jpeg" alt="Graduation portrait print mockup" />
             <div><h3>Graduation Print Mockup</h3><p>Portrait artwork prepared for printed display.</p></div>
           </article>
+        </div>
+      </section>
+
+      <section class="section admin-section" id="admin">
+        <div class="section-heading">
+          <span>Admin Area</span>
+          <h2>Upload a project to feature in the hero slider.</h2>
+        </div>
+        <div class="admin-panel">
+          <form class="admin-form" id="projectForm">
+            <label>
+              Project Image
+              <input type="file" id="projectImage" accept="image/*" required />
+            </label>
+            <label>
+              Project Title
+              <input type="text" id="projectTitle" placeholder="Example: Church poster design" required />
+            </label>
+            <label>
+              Category
+              <input type="text" id="projectCategory" placeholder="Poster, Logo, Flyer, Print" required />
+            </label>
+            <label>
+              Short Description
+              <textarea id="projectDescription" rows="4" placeholder="Describe the project briefly" required></textarea>
+            </label>
+            <div class="admin-actions">
+              <button type="submit">Add to Slider</button>
+              <button type="button" id="clearProjects">Clear Uploaded Projects</button>
+            </div>
+            <p class="admin-note">Uploaded projects are saved in this browser and will appear in the hero slider and portfolio section.</p>
+          </form>
+
+          <aside class="admin-preview">
+            <span>Preview</span>
+            <img id="imagePreview" src="photos/project-new-week.jpeg" alt="Uploaded project preview" />
+            <h3 id="previewTitle">Your project title</h3>
+            <p id="previewDescription">Choose an image and fill the form to preview your upload.</p>
+          </aside>
         </div>
       </section>
 
