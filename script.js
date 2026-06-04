@@ -22,6 +22,14 @@ const adminPassword = document.querySelector("#adminPassword");
 const loginError = document.querySelector("#loginError");
 const adminSection = document.querySelector("#admin");
 const adminLogout = document.querySelector("#adminLogout");
+const workRequestForm = document.querySelector("#workRequestForm");
+const clientName = document.querySelector("#clientName");
+const clientPhone = document.querySelector("#clientPhone");
+const clientEmail = document.querySelector("#clientEmail");
+const designType = document.querySelector("#designType");
+const clientDeadline = document.querySelector("#clientDeadline");
+const clientBudget = document.querySelector("#clientBudget");
+const projectBrief = document.querySelector("#projectBrief");
 const heroSlider = document.querySelector(".hero-slider");
 const portfolioGrid = document.querySelector(".portfolio-grid");
 const uploadedProjectsKey = "kongowea_uploaded_projects";
@@ -246,6 +254,26 @@ projectForm.addEventListener("submit", async (event) => {
 clearProjects.addEventListener("click", () => {
   localStorage.removeItem(uploadedProjectsKey);
   window.location.reload();
+});
+
+workRequestForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const message = [
+    "Hello Kongowea Graphix, I need design work.",
+    "",
+    `Name: ${clientName.value.trim()}`,
+    `Phone: ${clientPhone.value.trim()}`,
+    `Email: ${clientEmail.value.trim() || "Not provided"}`,
+    `Design Type: ${designType.value}`,
+    `Deadline: ${clientDeadline.value || "Not specified"}`,
+    `Budget: ${clientBudget.value.trim() || "Not specified"}`,
+    "",
+    "Project Details:",
+    projectBrief.value.trim()
+  ].join("\n");
+
+  window.open(`https://wa.me/254798137188?text=${encodeURIComponent(message)}`, "_blank", "noreferrer");
+  workRequestForm.reset();
 });
 
 startSlider();

@@ -33,6 +33,7 @@
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
+          <a href="#request">Request</a>
           <a href="#contact">Contact</a>
           <a class="quote-btn" href="https://wa.me/254798137188" target="_blank" rel="noreferrer">Get Quote</a>
         </div>
@@ -271,6 +272,62 @@
             <img id="imagePreview" src="photos/project-new-week.jpeg" alt="Uploaded project preview" />
             <h3 id="previewTitle">Your project title</h3>
             <p id="previewDescription">Choose an image and fill the form to preview your upload.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section request-section" id="request">
+        <div class="section-heading">
+          <span>Customer Brief</span>
+          <h2>Submit the details of the design work you want done.</h2>
+        </div>
+        <div class="request-panel">
+          <form class="request-form" id="workRequestForm">
+            <label>
+              Full Name
+              <input type="text" id="clientName" placeholder="Your name" required />
+            </label>
+            <label>
+              Phone Number
+              <input type="tel" id="clientPhone" placeholder="07..." required />
+            </label>
+            <label>
+              Email Address
+              <input type="email" id="clientEmail" placeholder="you@example.com" />
+            </label>
+            <label>
+              Type of Design
+              <select id="designType" required>
+                <option value="">Choose a service</option>
+                <option>Logo Design</option>
+                <option>Poster Design</option>
+                <option>Flyer Design</option>
+                <option>Banner Design</option>
+                <option>Business Card</option>
+                <option>Portrait Printing</option>
+                <option>Social Media Graphic</option>
+                <option>Other Design Work</option>
+              </select>
+            </label>
+            <label>
+              Deadline
+              <input type="date" id="clientDeadline" />
+            </label>
+            <label>
+              Budget
+              <input type="text" id="clientBudget" placeholder="Example: KSh 2,000" />
+            </label>
+            <label class="request-wide">
+              Project Details
+              <textarea id="projectBrief" rows="5" placeholder="Describe the design, colors, text to include, size, and any references." required></textarea>
+            </label>
+            <button type="submit">Send Brief on WhatsApp</button>
+            <p class="request-note">Your details will open in WhatsApp so Kongowea Graphix can receive and reply quickly.</p>
+          </form>
+          <aside class="request-help">
+            <h3>Helpful details to include</h3>
+            <p>Tell us the design size, text to appear, preferred colors, deadline, and where the design will be used.</p>
+            <p>For image references or logos, send them on WhatsApp after submitting the brief.</p>
           </aside>
         </div>
       </section>
